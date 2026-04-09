@@ -96,9 +96,9 @@ export default function Gasification() {
             <Button
               size="lg"
               className="bg-blue-500 text-white hover:bg-blue-400 font-semibold text-base px-8 py-6"
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/?section=contacts")}
             >
-              Оставить заявку
+              Оставить заявку на монтаж
             </Button>
           </motion.div>
         </div>

@@ -11,7 +11,7 @@ const fadeUp = (delay = 0) => ({
   transition: { duration: 0.6, delay },
 })
 
-function HeroSection({ isActive, showButton, buttonText }: SectionProps) {
+function HeroSection({ isActive, showButton, buttonText, onScrollTo }: SectionProps) {
   return (
     <section className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
       <motion.div
@@ -58,6 +58,7 @@ function HeroSection({ isActive, showButton, buttonText }: SectionProps) {
           <Button
             size="lg"
             className="bg-blue-500 text-white hover:bg-blue-400 font-semibold text-base px-8 py-6"
+            onClick={() => onScrollTo?.(3)}
           >
             {buttonText}
           </Button>

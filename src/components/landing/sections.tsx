@@ -5,7 +5,7 @@ export const sections = [
     title: 'Строительство • Газофикация • Климат',
     subtitle: 'под ключ',
     showButton: true,
-    buttonText: 'Оставить заявку'
+    buttonText: 'Рассчитать стоимость'
   },
   {
     id: 'features',

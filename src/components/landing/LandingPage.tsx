@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useSpring } from 'framer-motion'
+import { useSearchParams } from 'react-router-dom'
 import Section from './Section'
 import Layout from './Layout'
 import { sections } from './sections'
@@ -9,6 +10,19 @@ export default function LandingPage() {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ container: containerRef })
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 })
+  const [searchParams] = useSearchParams()
+
+  useEffect(() => {
+    const target = searchParams.get('section')
+    if (target && containerRef.current) {
+      const idx = sections.findIndex(s => s.id === target)
+      if (idx !== -1) {
+        setTimeout(() => {
+          containerRef.current?.scrollTo({ top: idx * window.innerHeight, behavior: 'smooth' })
+        }, 300)
+      }
+    }
+  }, [searchParams])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,6 +81,7 @@ export default function LandingPage() {
             key={section.id}
             {...section}
             isActive={index === activeSection}
+            onScrollTo={handleNavClick}
           />
         ))}
       </div>
