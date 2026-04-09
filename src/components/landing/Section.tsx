@@ -26,7 +26,7 @@ function HeroSection({ isActive, showButton, buttonText }: SectionProps) {
         />
         <div>
           <div className="text-white font-bold text-2xl md:text-3xl tracking-tight leading-tight">
-            Карел<span className="text-amber-400">Климат</span>
+            Карел<span className="text-blue-500">Климат</span>
           </div>
           <div className="text-neutral-400 text-sm tracking-widest uppercase mt-0.5">Строительная компания</div>
         </div>
@@ -38,7 +38,7 @@ function HeroSection({ isActive, showButton, buttonText }: SectionProps) {
         animate={isActive ? fadeUp(0.1).animate : {}}
       >
         Строительство<br />
-        <span className="text-amber-400">Газификация</span><br />
+        <span className="text-blue-500">Газификация</span><br />
         Климат — под ключ
       </motion.h1>
       <motion.p
@@ -56,7 +56,7 @@ function HeroSection({ isActive, showButton, buttonText }: SectionProps) {
         >
           <Button
             size="lg"
-            className="bg-amber-400 text-black hover:bg-amber-300 font-semibold text-base px-8 py-6"
+            className="bg-blue-500 text-white hover:bg-blue-400 font-semibold text-base px-8 py-6"
           >
             {buttonText}
           </Button>
@@ -70,7 +70,7 @@ function AboutSection({ isActive }: SectionProps) {
   return (
     <section className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
       <motion.span
-        className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4"
+        className="text-blue-500 text-sm font-semibold tracking-widest uppercase mb-4"
         initial={{ opacity: 0 }} animate={isActive ? { opacity: 1 } : {}} transition={{ duration: 0.5 }}
       >
         О нас
@@ -101,7 +101,7 @@ function AboutSection({ isActive }: SectionProps) {
       >
         {[['10+', 'лет на рынке'], ['200+', 'сданных объектов'], ['100%', 'фикс-цена']].map(([num, label]) => (
           <div key={label}>
-            <div className="text-3xl font-bold text-amber-400">{num}</div>
+            <div className="text-3xl font-bold text-blue-500">{num}</div>
             <div className="text-neutral-400 text-sm mt-1">{label}</div>
           </div>
         ))}
@@ -123,12 +123,12 @@ function FeaturesSection({ isActive }: SectionProps) {
   return (
     <section className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
       <motion.span
-        className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4"
+        className="text-blue-500 text-sm font-semibold tracking-widest uppercase mb-4"
         initial={{ opacity: 0 }} animate={isActive ? { opacity: 1 } : {}} transition={{ duration: 0.5 }}
       >
       </motion.span>
       <motion.h2
-        className="text-4xl md:text-5xl font-bold text-amber-400 mb-10"
+        className="text-4xl md:text-5xl font-bold text-blue-500 mb-10"
         {...fadeUp(0.1)}
         animate={isActive ? fadeUp(0.1).animate : {}}
       >
@@ -141,7 +141,7 @@ function FeaturesSection({ isActive }: SectionProps) {
       >
         {features.map(({ icon, title, desc }) => (
           <div key={title} className="flex gap-3 items-start group">
-            <div className="mt-0.5 text-amber-400 shrink-0">
+            <div className="mt-0.5 text-blue-500 shrink-0">
               <Icon name={icon} size={22} fallback="CheckCircle" />
             </div>
             <div>
@@ -177,7 +177,7 @@ function ServicesSection({ isActive }: SectionProps) {
   return (
     <section className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
       <motion.span
-        className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4"
+        className="text-blue-500 text-sm font-semibold tracking-widest uppercase mb-4"
         initial={{ opacity: 0 }} animate={isActive ? { opacity: 1 } : {}} transition={{ duration: 0.5 }}
       >
         Услуги
@@ -197,14 +197,14 @@ function ServicesSection({ isActive }: SectionProps) {
         {services.map(({ icon, title, desc }) => (
           <div
             key={title}
-            className="border border-neutral-800 rounded-xl p-6 hover:border-amber-400 transition-colors group bg-neutral-900/50"
+            className="border border-neutral-800 rounded-xl p-6 hover:border-blue-500 transition-colors group bg-neutral-900/50"
           >
-            <div className="text-amber-400 mb-4">
+            <div className="text-blue-500 mb-4">
               <Icon name={icon} size={32} fallback="Wrench" />
             </div>
             <h3 className="text-white font-bold text-xl mb-2">{title}</h3>
             <p className="text-neutral-400 text-sm leading-relaxed mb-5">{desc}</p>
-            <button className="text-amber-400 text-sm font-medium hover:text-amber-300 transition-colors flex items-center gap-1">
+            <button className="text-blue-500 text-sm font-medium hover:text-blue-400 transition-colors flex items-center gap-1">
               Подробнее <Icon name="ArrowRight" size={14} />
             </button>
           </div>
@@ -220,7 +220,7 @@ function ContactsSection({ isActive }: SectionProps) {
   return (
     <section className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
       <motion.span
-        className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4"
+        className="text-blue-500 text-sm font-semibold tracking-widest uppercase mb-4"
         initial={{ opacity: 0 }} animate={isActive ? { opacity: 1 } : {}} transition={{ duration: 0.5 }}
       >
         Контакты
@@ -239,19 +239,19 @@ function ContactsSection({ isActive }: SectionProps) {
       >
         <div className="flex-1 space-y-4">
           <input
-            className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400 transition-colors"
+            className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-blue-500 transition-colors"
             placeholder="Ваше имя"
             value={form.name}
             onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
           />
           <input
-            className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400 transition-colors"
+            className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-blue-500 transition-colors"
             placeholder="Телефон"
             value={form.phone}
             onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
           />
           <select
-            className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 text-neutral-400 focus:outline-none focus:border-amber-400 transition-colors appearance-none"
+            className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-3 text-neutral-400 focus:outline-none focus:border-blue-500 transition-colors appearance-none"
             value={form.service}
             onChange={e => setForm(f => ({ ...f, service: e.target.value }))}
           >
@@ -260,25 +260,25 @@ function ContactsSection({ isActive }: SectionProps) {
             <option value="gas">Газификация</option>
             <option value="climate">Кондиционирование и вентиляция</option>
           </select>
-          <Button className="w-full bg-amber-400 text-black hover:bg-amber-300 font-semibold py-6 text-base">
+          <Button className="w-full bg-blue-500 text-white hover:bg-blue-400 font-semibold py-6 text-base">
             Отправить заявку
           </Button>
         </div>
         <div className="space-y-5 text-neutral-300">
           <div className="flex items-center gap-3">
-            <Icon name="Phone" size={18} className="text-amber-400" />
+            <Icon name="Phone" size={18} className="text-blue-500" />
             <span>+7 (902) 777-77-30</span>
           </div>
           <div className="flex items-center gap-3">
-            <Icon name="Mail" size={18} className="text-amber-400" />
+            <Icon name="Mail" size={18} className="text-blue-500" />
             <span>karelklimat@yandex.ru</span>
           </div>
           <div className="flex items-center gap-4 pt-2">
             <span className="text-neutral-500 text-sm">Мессенджеры:</span>
-            <button className="text-neutral-300 hover:text-amber-400 transition-colors">
+            <button className="text-neutral-300 hover:text-blue-500 transition-colors">
               <Icon name="MessageCircle" size={22} fallback="Phone" />
             </button>
-            <button className="text-neutral-300 hover:text-amber-400 transition-colors">
+            <button className="text-neutral-300 hover:text-blue-500 transition-colors">
               <Icon name="Send" size={22} fallback="Phone" />
             </button>
           </div>
@@ -296,7 +296,7 @@ function FooterSection({ isActive }: SectionProps) {
         initial={{ opacity: 0 }} animate={isActive ? { opacity: 1 } : {}} transition={{ duration: 0.8 }}
       >
         <div className="text-white font-bold text-xl tracking-tight">
-          Карел<span className="text-amber-400">Климат</span>
+          Карел<span className="text-blue-500">Климат</span>
         </div>
         <p className="text-neutral-600 text-sm">© 2024 Карел Климат. Все права защищены.</p>
         <button className="text-neutral-500 text-sm hover:text-neutral-300 transition-colors">
