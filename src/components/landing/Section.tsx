@@ -126,10 +126,9 @@ function FeaturesSection({ isActive }: SectionProps) {
         className="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4"
         initial={{ opacity: 0 }} animate={isActive ? { opacity: 1 } : {}} transition={{ duration: 0.5 }}
       >
-        Преимущества
       </motion.span>
       <motion.h2
-        className="text-4xl md:text-5xl font-bold text-white mb-10"
+        className="text-4xl md:text-5xl font-bold text-amber-400 mb-10"
         {...fadeUp(0.1)}
         animate={isActive ? fadeUp(0.1).animate : {}}
       >
