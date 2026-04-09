@@ -38,7 +38,7 @@ function HeroSection({ isActive, showButton, buttonText }: SectionProps) {
         animate={isActive ? fadeUp(0.1).animate : {}}
       >
         Строительство<br />
-        <span className="text-amber-400">Газофикация</span><br />
+        <span className="text-amber-400">Газификация</span><br />
         Климат — под ключ
       </motion.h1>
       <motion.p
@@ -164,7 +164,7 @@ const services = [
   },
   {
     icon: 'Flame',
-    title: 'Газофикация',
+    title: 'Газификация',
     desc: 'Разработка проекта, согласование с газовой службой, монтаж газопровода и сдача системы под ключ.',
   },
   {
@@ -258,7 +258,7 @@ function ContactsSection({ isActive }: SectionProps) {
           >
             <option value="">Выберите услугу</option>
             <option value="construction">Строительство</option>
-            <option value="gas">Газофикация</option>
+            <option value="gas">Газификация</option>
             <option value="climate">Кондиционирование и вентиляция</option>
           </select>
           <Button className="w-full bg-amber-400 text-black hover:bg-amber-300 font-semibold py-6 text-base">
