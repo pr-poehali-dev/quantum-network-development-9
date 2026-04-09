@@ -8,11 +8,6 @@ export const sections = [
     buttonText: 'Оставить заявку'
   },
   {
-    id: 'about',
-    type: 'about',
-    title: 'О компании',
-  },
-  {
     id: 'features',
     type: 'features',
     title: 'Почему нас выбирают',
