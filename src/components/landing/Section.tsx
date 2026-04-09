@@ -21,8 +21,8 @@ function HeroSection({ isActive, showButton, buttonText }: SectionProps) {
         <img
           src="https://cdn.poehali.dev/files/f0d60fb7-3306-4dc2-89f8-a0a62b3199aa.PNG"
           alt="Карел Климат логотип"
-          className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-lg"
-          style={{ mixBlendMode: 'screen' }}
+          className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-lg bg-black"
+          style={{  }}
         />
         <div>
           <div className="text-white font-bold text-2xl md:text-3xl tracking-tight leading-tight">
