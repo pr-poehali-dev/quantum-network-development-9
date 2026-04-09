@@ -256,11 +256,11 @@ function ContactsSection({ isActive }: SectionProps) {
         <div className="space-y-5 text-neutral-300">
           <div className="flex items-center gap-3">
             <Icon name="Phone" size={18} className="text-amber-400" />
-            <span>+7 (000) 000-00-00</span>
+            <span>+7 (902) 777-77-30</span>
           </div>
           <div className="flex items-center gap-3">
             <Icon name="Mail" size={18} className="text-amber-400" />
-            <span>info@company.ru</span>
+            <span>karelklimat@yandex.ru</span>
           </div>
           <div className="flex items-center gap-4 pt-2">
             <span className="text-neutral-500 text-sm">Мессенджеры:</span>
