@@ -13,13 +13,25 @@ const fadeUp = (delay = 0) => ({
 function HeroSection({ isActive, showButton, buttonText }: SectionProps) {
   return (
     <section className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
-      <motion.p
-        className="text-amber-400 text-lg md:text-xl font-medium tracking-widest uppercase mb-4"
+      <motion.div
+        className="flex items-center gap-4 mb-6"
         {...fadeUp(0)}
         animate={isActive ? fadeUp(0).animate : {}}
       >
-        Строительная компания
-      </motion.p>
+        <img
+          src="https://cdn.poehali.dev/files/f0d60fb7-3306-4dc2-89f8-a0a62b3199aa.PNG"
+          alt="Карел Климат логотип"
+          className="w-16 h-16 md:w-20 md:h-20 object-contain"
+          style={{ filter: 'brightness(0) invert(1)' }}
+        />
+        <div>
+          <div className="text-white font-bold text-2xl md:text-3xl tracking-tight leading-tight">
+            Карел<span className="text-amber-400">Климат</span>
+          </div>
+          <div className="text-neutral-400 text-sm tracking-widest uppercase mt-0.5">Строительная компания</div>
+        </div>
+      </motion.div>
+
       <motion.h1
         className="text-4xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-bold leading-[1.1] tracking-tight max-w-4xl text-white"
         {...fadeUp(0.1)}
