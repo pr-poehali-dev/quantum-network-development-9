@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import Icon from "@/components/ui/icon"
 import type { SectionProps } from "@/types"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 50 },
@@ -160,20 +161,25 @@ const services = [
     icon: 'HardHat',
     title: 'Строительство',
     desc: 'Полный цикл возведения объектов под ключ — проектирование, строительство, отделка и сдача в эксплуатацию.',
+    link: '/construction',
   },
   {
     icon: 'Flame',
     title: 'Газификация',
     desc: 'Разработка проекта, согласование с газовой службой, монтаж газопровода и сдача системы под ключ.',
+    link: '',
   },
   {
     icon: 'Wind',
     title: 'Кондиционирование и вентиляция',
     desc: 'Проектирование и монтаж систем кондиционирования, вентиляции и климат-контроля для любых объектов.',
+    link: '',
   },
 ]
 
 function ServicesSection({ isActive }: SectionProps) {
+  const navigate = useNavigate()
+
   return (
     <section className="relative h-screen w-full snap-start flex flex-col justify-center p-8 md:p-16 lg:p-24">
       <motion.span
@@ -194,7 +200,7 @@ function ServicesSection({ isActive }: SectionProps) {
         {...fadeUp(0.2)}
         animate={isActive ? fadeUp(0.2).animate : {}}
       >
-        {services.map(({ icon, title, desc }) => (
+        {services.map(({ icon, title, desc, link }) => (
           <div
             key={title}
             className="border border-neutral-800 rounded-xl p-6 hover:border-blue-500 transition-colors group bg-neutral-900/50"
@@ -204,7 +210,10 @@ function ServicesSection({ isActive }: SectionProps) {
             </div>
             <h3 className="text-white font-bold text-xl mb-2">{title}</h3>
             <p className="text-neutral-400 text-sm leading-relaxed mb-5">{desc}</p>
-            <button className="text-blue-500 text-sm font-medium hover:text-blue-400 transition-colors flex items-center gap-1">
+            <button
+              className="text-blue-500 text-sm font-medium hover:text-blue-400 transition-colors flex items-center gap-1"
+              onClick={() => link && navigate(link)}
+            >
               Подробнее <Icon name="ArrowRight" size={14} />
             </button>
           </div>
