@@ -285,9 +285,9 @@ function FooterSection({ isActive }: SectionProps) {
         initial={{ opacity: 0 }} animate={isActive ? { opacity: 1 } : {}} transition={{ duration: 0.8 }}
       >
         <div className="text-white font-bold text-xl tracking-tight">
-          Строй<span className="text-amber-400">Мастер</span>
+          Карел<span className="text-amber-400">Климат</span>
         </div>
-        <p className="text-neutral-600 text-sm">© 2024 СтройМастер. Все права защищены.</p>
+        <p className="text-neutral-600 text-sm">© 2024 Карел Климат. Все права защищены.</p>
         <button className="text-neutral-500 text-sm hover:text-neutral-300 transition-colors">
           Политика конфиденциальности
         </button>
