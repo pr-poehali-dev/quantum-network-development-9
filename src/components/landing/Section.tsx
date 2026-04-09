@@ -22,7 +22,7 @@ function HeroSection({ isActive, showButton, buttonText }: SectionProps) {
           src="https://cdn.poehali.dev/files/f0d60fb7-3306-4dc2-89f8-a0a62b3199aa.PNG"
           alt="Карел Климат логотип"
           className="w-16 h-16 md:w-20 md:h-20 object-contain"
-          style={{ filter: 'brightness(0) invert(1)' }}
+          style={{ mixBlendMode: 'screen' }}
         />
         <div>
           <div className="text-white font-bold text-2xl md:text-3xl tracking-tight leading-tight">
