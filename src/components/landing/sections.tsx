@@ -22,9 +22,5 @@ export const sections = [
     type: 'contacts',
     title: 'Свяжитесь с нами',
   },
-  {
-    id: 'footer',
-    type: 'footer',
-    title: '',
-  },
+
 ]
