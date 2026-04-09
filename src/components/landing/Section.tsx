@@ -18,7 +18,7 @@ function HeroSection({ isActive, showButton, buttonText }: SectionProps) {
         {...fadeUp(0)}
         animate={isActive ? fadeUp(0).animate : {}}
       >
-        Компания полного цикла
+        Строительная компания
       </motion.p>
       <motion.h1
         className="text-4xl md:text-6xl lg:text-[5rem] xl:text-[6rem] font-bold leading-[1.1] tracking-tight max-w-4xl text-white"
