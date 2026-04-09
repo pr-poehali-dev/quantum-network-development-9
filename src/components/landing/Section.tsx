@@ -19,7 +19,7 @@ function HeroSection({ isActive, showButton, buttonText }: SectionProps) {
         animate={isActive ? fadeUp(0).animate : {}}
       >
         <img
-          src="https://cdn.poehali.dev/projects/ba4956b4-5aad-425d-86d4-89e16376d4d4/files/23a12599-cbd0-4852-9674-31c6d5814208.jpg"
+          src="https://cdn.poehali.dev/files/f0d60fb7-3306-4dc2-89f8-a0a62b3199aa.PNG"
           alt="Карел Климат логотип"
           className="w-16 h-16 md:w-20 md:h-20 object-contain rounded-lg"
           style={{ mixBlendMode: 'screen' }}
